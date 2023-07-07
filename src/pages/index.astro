@@ -110,12 +110,7 @@ const images = await Promise.all(
                 <div
                   class={`w-full h-full flex object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200 text-transparent`}
                 >
-                  <Img
-                    src={image.href}
-                    alt={image.label}
-                    format="webp"
-                    width={image.size.width / 3}
-                  />
+                  <Img src={image.href} alt={image.label} format="webp" />
                 </div>
 
                 <div class="bg-gradient-to-t from-black via-transparent to-transparent opacity-20 absolute inset-0 pointer-events-none group-hover:opacity-0 transition duration-200" />
