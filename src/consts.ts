@@ -1,7 +1,7 @@
 export const ROUTES = [
   {
     href: '/',
-    label: 'Art',
+    label: 'Photography',
   },
   {
     href: '/about',
@@ -12,39 +12,39 @@ export const ROUTES = [
 // Icons from https://icon-sets.iconify.design
 export const SOCIAL = [
   {
-    label: 'Twitter',
-    href: 'https://twitter.com/EmaSuriano',
-    icon: 'mdi:twitter',
-  },
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/emanuel-suriano/',
-    icon: 'mdi:linkedin',
-  },
-  {
     label: 'Website',
-    href: 'https://emasuriano.com',
-    icon: 'mdi:web',
+    href: "https://bravecottrell.com",
+    icon: "mdi:web"
+  },
+  {
+    label: 'Modelling',
+    href: 'https://photos.bravecottrell.com',
+    icon: 'mdi:camera',
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/modelcottrell/',
+    icon: 'mdi:instagram',
   },
 ] as const;
 
 export const PERSONAL_INFO = {
-  name: 'Ema Suriano',
-  title: "Ema Suriano's Art",
-  subtitle: 'A collection of my best work in one place',
-  role: 'Digital Artist',
-  contact: 'mailto:emanuel.suriano@gmail.com',
+  name: 'Jonathan Cottrell',
+  title: "Jonathan Cottrell Studios",
+  subtitle: 'A selection of my work.',
+  role: 'Photographer',
+  contact: 'mailto:johnny@johnnyweho.com',
   avatar:
-    'https://cdn.discordapp.com/attachments/1023544104698773564/1049350422290251847/Ema_portrait_of_a_young_man_with_background_of_snow_mountains_i_f1762cd5-f4f3-4107-839c-194dab4dffa7.png',
+    'https://photos.bravecottrell.com/assets/jonathan-profile-compressed.jpg',
   about:
-    'During the day I am Software Engineer, but at night I switched into my Artistic side. Most of my creations are made with Mid Journey (AI generation), and later on improved using Adobe Photoshop.',
+    'During the day I am Software Engineer, but at night I switched into my Artistic side. I love when art & technology meet.',
 } as const;
 
 export const SEO_INFO = [
   {
     name: 'description',
-    content: 'Art portfolio made by Ema Suriano in his free time',
+    content: 'Art & Photography portfolio made by Jonathan Cottrell',
   },
-  { name: 'keywords', content: 'Art portfolio, Digital art, gallery' },
+  { name: 'keywords', content: 'Art portfolio, Digital art, gallery, photography, modelcottrell, model, jonathan cottrell' },
   { name: 'author', content: PERSONAL_INFO.name },
 ];

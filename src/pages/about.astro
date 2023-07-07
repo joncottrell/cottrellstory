@@ -1,8 +1,8 @@
 ---
-import { Img } from 'astro-imagetools/components';
-import Layout from '../layouts/Layout.astro';
-import Footer from '../components/Footer.astro';
-import { PERSONAL_INFO } from '../consts';
+import { Img } from "astro-imagetools/components";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import { PERSONAL_INFO } from "../consts";
 
 const { role, name, avatar, contact, about } = PERSONAL_INFO;
 
@@ -41,7 +41,7 @@ const title = `${name} - About`;
 
               {
                 about
-                  .split('.')
+                  .split(".")
                   .map((text) => (
                     <p class="text-gray-500 md:text-lg text-center sm:text-left mb-8">
                       {text}

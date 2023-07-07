@@ -1,24 +1,78 @@
 ---
-import { Img } from 'astro-imagetools/components';
-import probe from 'probe-image-size';
-import Layout from '../layouts/Layout.astro';
-import Footer from '../components/Footer.astro';
-import { PERSONAL_INFO } from '../consts';
-import { getNotionItems } from '../utils';
+import { Img } from "astro-imagetools/components";
+import probe from "probe-image-size";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import { PERSONAL_INFO } from "../consts";
 
-const notionItems = await getNotionItems({
-  auth: import.meta.env.NOTION_API_KEY,
-});
+// add
+// assets/arisce.jpg
+// 	assets/hello-there.png
+// 	assets/jessica-lounge.jpg
+// 	assets/kait-couch-1-crop.jpg
+// 	assets/kait-kara-vintage-2.jpg
+// 	assets/meds.png
+// 	assets/sam-dress-edit.jpg
+
+const imageData = [
+  {
+    label: "Underwater Show",
+    href: "https://photos.bravecottrell.com/assets/underwater-show.jpg",
+  },
+  {
+    label: "Cello's Embrace",
+    href: "https://photos.bravecottrell.com/assets/cell-2019-jonathan-cottrell.jpg",
+  },
+  {
+    label: "Owl Boy",
+    href: "https://photos.bravecottrell.com/assets/daniel-fowlboy.jpg",
+  },
+  {
+    label: "Arisce Wanzer",
+    href: "https://photos.bravecottrell.com/assets/arisce.jpg",
+  },
+  {
+    label: "Anonymous Exchange",
+    href: "https://photos.bravecottrell.com/assets/hello-there.png",
+  },
+  {
+    label: "Lounge in Pink",
+    href: "https://photos.bravecottrell.com/assets/jessica-lounge.jpg",
+  },
+  {
+    label: "Vintage on the Couch",
+    href: "https://photos.bravecottrell.com/assets/kait-couch-1-crop.jpg",
+  },
+  {
+    label: "Life-saving poison",
+    href: "https://photos.bravecottrell.com/assets/meds.png",
+  },
+  {
+    label: "His Dress",
+    href: "https://photos.bravecottrell.com/assets/sam-dress-edit.jpg",
+  },
+  {
+    label: "Kait & Kara",
+    href: "https://photos.bravecottrell.com/assets/kait-kara-vintage-2.jpg",
+  },
+  {
+    label: "Emoja Lisa",
+    href: "https://photos.bravecottrell.com/assets/emoja-lisa.png",
+  },
+  {
+    label: "Mermaid Meditation",
+    href: "https://photos.bravecottrell.com/assets/mary.jpg",
+  },
+];
 
 const images = await Promise.all(
-  notionItems.map(async ({ plain_text }) => {
-    const index = plain_text.lastIndexOf(' ');
-    const label = plain_text.substring(0, index);
-    const href = plain_text.substring(index + 1);
+  imageData.map(async (data) => {
+    const label = data.label;
+    const href = data.href;
     const size = await probe(href);
 
     return { label, href, size };
-  }),
+  })
 );
 ---
 
@@ -53,7 +107,9 @@ const images = await Promise.all(
                 data-pswp-height={image.size.height}
                 class="group h-72 md:h-96 flex justify-end items-end bg-gray-100 overflow-hidden rounded-xl shadow-lg relative gallery-item hover:shadow-xl"
               >
-                <div class="w-full h-full flex object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200 text-transparent">
+                <div
+                  class={`w-full h-full flex object-cover object-center object-left absolute inset-0 group-hover:scale-110 transition duration-200 text-transparent`}
+                >
                   <Img
                     src={image.href}
                     alt={image.label}
