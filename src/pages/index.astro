@@ -1,5 +1,5 @@
 ---
-import { Img } from "astro-imagetools/components";
+import { Img, Picture } from "astro-imagetools/components";
 import probe from "probe-image-size";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
@@ -108,9 +108,13 @@ const images = await Promise.all(
                 class="group h-72 md:h-96 flex justify-end items-end bg-gray-100 overflow-hidden rounded-xl shadow-lg relative gallery-item hover:shadow-xl"
               >
                 <div
-                  class={`w-full h-full flex object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200 text-transparent`}
+                  class={`h-full w-full object-cover object-center flex absolute inset-0 group-hover:scale-110 transition duration-200 text-transparent`}
                 >
-                  <Img src={image.href} alt={image.label} format="webp" />
+                  <img
+                    src={image.href}
+                    alt={image.label}
+                    class="object-cover"
+                  />
                 </div>
 
                 <div class="bg-gradient-to-t from-black via-transparent to-transparent opacity-20 absolute inset-0 pointer-events-none group-hover:opacity-0 transition duration-200" />
