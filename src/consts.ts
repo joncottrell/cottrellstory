@@ -17,7 +17,7 @@ export const SOCIAL = [
     icon: "mdi:web"
   },
   {
-    label: 'Modelling',
+    label: 'Modeling',
     href: 'https://photos.bravecottrell.com',
     icon: 'mdi:camera',
   },
@@ -30,7 +30,7 @@ export const SOCIAL = [
 
 export const PERSONAL_INFO = {
   name: 'Jonathan Cottrell',
-  title: "Jonathan Cottrell Studios",
+  title: "Model Cottrell Studios",
   subtitle: 'A selection of my photographs and art.',
   role: 'Photographer',
   contact: 'mailto:johnny@johnnyweho.com',
