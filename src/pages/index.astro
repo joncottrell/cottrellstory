@@ -6,25 +6,37 @@ import Footer from "../components/Footer.astro";
 import { PERSONAL_INFO } from "../consts";
 
 const imageData = [
+{
+    label: "Cello's Embrace",
+    href: "https://photos.bravecottrell.com/assets/cell-2019-jonathan-cottrell.jpg",
+  },
+  {
+    label: "Life-saving poison",
+    href: "https://photos.bravecottrell.com/assets/meds.png",
+  },
+  {
+    label: "Anonymous Exchange",
+    href: "https://photos.bravecottrell.com/assets/hello-there.png",
+  },
+  {
+    label: "Cracked",
+    href: "https://photos.bravecottrell.com/assets/cracked.jpg",
+  },
   {
     label: "Underwater Show",
     href: "https://photos.bravecottrell.com/assets/underwater-show.jpg",
   },
   {
-    label: "Cello's Embrace",
-    href: "https://photos.bravecottrell.com/assets/cell-2019-jonathan-cottrell.jpg",
+    label: "Venice Sunset",
+    href: "https://photos.bravecottrell.com/assets/skatepark.jpg",
+  },
+  {
+    label: "Mermaid Meditation",
+    href: "https://photos.bravecottrell.com/assets/mary.jpg",
   },
   {
     label: "Owl Boy",
     href: "https://photos.bravecottrell.com/assets/daniel-fowlboy.jpg",
-  },
-  {
-    label: "Arisce Wanzer",
-    href: "https://photos.bravecottrell.com/assets/arisce.jpg",
-  },
-  {
-    label: "Anonymous Exchange",
-    href: "https://photos.bravecottrell.com/assets/hello-there.png",
   },
   {
     label: "Lounge in Pink",
@@ -35,24 +47,28 @@ const imageData = [
     href: "https://photos.bravecottrell.com/assets/kait-couch-1-crop.jpg",
   },
   {
-    label: "Life-saving poison",
-    href: "https://photos.bravecottrell.com/assets/meds.png",
-  },
-  {
-    label: "His Dress",
-    href: "https://photos.bravecottrell.com/assets/sam-dress-edit.jpg",
+    label: "Arisce Wanzer",
+    href: "https://photos.bravecottrell.com/assets/arisce.jpg",
   },
   {
     label: "Kait & Kara",
     href: "https://photos.bravecottrell.com/assets/kait-kara-vintage-2.jpg",
   },
   {
+    label: "Golden Gate Emojis",
+    href: "https://photos.bravecottrell.com/assets/final-goldengate.png",
+  },
+  {
     label: "Emoja Lisa",
     href: "https://photos.bravecottrell.com/assets/emoja-lisa.png",
   },
   {
-    label: "Mermaid Meditation",
-    href: "https://photos.bravecottrell.com/assets/mary.jpg",
+    label: "Flower Power",
+    href: "https://photos.bravecottrell.com/assets/pink-flowers.jpg",
+  },
+  {
+    label: "Rainbow Road",
+    href: "https://photos.bravecottrell.com/assets/rainbow-bridge.jpg",
   },
 ];
 
@@ -87,7 +103,7 @@ const images = await Promise.all(
       <div class="max-w-screen-xl px-4 md:px-8 mx-auto">
         <div
           id="my-gallery"
-          class="pswp-gallery grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 xl:gap-8 gallery"
+          class="justify-center items-center pswp-gallery grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:gap-8 gallery"
         >
           {
             images.map((image) => (
