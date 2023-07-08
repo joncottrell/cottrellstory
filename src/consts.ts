@@ -31,13 +31,13 @@ export const SOCIAL = [
 export const PERSONAL_INFO = {
   name: 'Jonathan Cottrell',
   title: "Jonathan Cottrell Studios",
-  subtitle: 'A selection of my work.',
+  subtitle: 'A selection of my photographs and art.',
   role: 'Photographer',
   contact: 'mailto:johnny@johnnyweho.com',
   avatar:
     'https://photos.bravecottrell.com/assets/jonathan-profile-compressed.jpg',
   about:
-    'During the day I am Software Engineer, but at night I switched into my Artistic side. I love when art & technology meet.',
+    'Software Engineer by day, but Artist & Photographer by night. I love when art & technology meet.',
 } as const;
 
 export const SEO_INFO = [
