@@ -31,7 +31,7 @@ export const SOCIAL = [
 export const PERSONAL_INFO = {
   name: 'Jonathan Cottrell',
   title: "Model Cottrell Studios",
-  subtitle: 'A selection of my photographs and art.',
+  subtitle: 'A selection of Photographs and Art.',
   role: 'Photographer',
   contact: 'mailto:johnny@johnnyweho.com',
   avatar:
